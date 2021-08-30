@@ -30,10 +30,22 @@ def handle_custom_event_5(string):
     print(f"Got string: {string}")
 
 
+# MAIN ROUTINE SECTION #
 if __name__ == '__main__':
+    selection = input("Do you want to propagate the server in your whole network\n"
+          "so that it can be accessed by other network devices\n"
+          "(WARNING: If you cannot fully trust the network, this\n"
+          " may pose an additional security risk!)? [type in Y for yes,\n"
+          "and any other symbol for no, followed by pressing ENTER] ")
+
     # We use the address 0.0.0.0 in order to propagate
     # the server in our local network. If you only want
     # to use the server on your hosting device only, use
     # the address 127.0.0.1.
-    # The default port number is 5000.
-    socketio.run(app, host="0.0.0.0", port=5000)
+    # Flask's default port number is 5000.
+    if selection == "Y":
+        host = "0.0.0.0"
+    else:
+        host = "127.0.0.1"
+
+    socketio.run(app, host=host, port=5000)
