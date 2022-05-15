@@ -18,10 +18,8 @@ cd basic_server
 conda env create -n basic_server -f environment.yml
 conda activate basic_server
 pip install simple-websocket
-# 5th: Test basic_server either (on Windows) with...
-./run.bat
-# ...or (on Linux) with...
-./run.sh
+# 5th: Run basic_server with
+python run.py
 # Optional further test: Check if you can access
 # the server from other devices in your local network.
 # If this is not the case, you have to allow the basic_server
