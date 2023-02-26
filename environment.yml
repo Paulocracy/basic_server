@@ -3,10 +3,18 @@ channels:
   - conda-forge
   - anaconda
 dependencies:
-  - pytest
-  - pylint
-  - autopep8
+  # Python and package management itself
+  - python=3.11
   - pip
-  - python=3.9
+  # Modules for setting up development environment
+  - pylint
+  - pytest
+  - black
+  - pydantic
+  # Typically used modules
+  - requests
+  - orjson
+  # Essential modules for the server
   - flask
   - flask-socketio
+  - simple-websocket  # Without this, Socket.IO falls back to less efficient means than WebSocket

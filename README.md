@@ -3,10 +3,10 @@
 *A basic configuration for a Flask Python server with JSON-based Socket.IO communication and TypeScript-derived JavaScript.*
 
 ## Installation
+
 ```
 # 1st: Install node.js, e.g., from https://nodejs.org/
-#      (use the LTS version since TypeScript is optimized for it)
-#      and add node.js to your system's PATH (you can select it, e.g., in the
+#      and add node.js to your system's PATH (you may select this option the
 #      graphical installer)
 # 2nd: Install and test TypeScript *as root/sudo/administrator* via:
 npm install -g typescript
@@ -17,7 +17,6 @@ git clone https://github.com/Paulocracy/basic_server
 cd basic_server
 conda env create -n basic_server -f environment.yml
 conda activate basic_server
-pip install simple-websocket
 # 5th: Run basic_server with
 python run.py
 # Optional further test: Check if you can access
@@ -29,4 +28,5 @@ python run.py
 ```
 
 ## Future ideas
+
 * HTTPS integration protocol?

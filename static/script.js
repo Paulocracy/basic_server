@@ -1,7 +1,7 @@
-var socket = io()
-// ...THIS LINE (END OF LINES WHICH MUST NOT BE CHANGED)
-// The reason for why this is done: Otherwise, run.py's transformation
-// for a working static import wouldn't work correctly
+/**
+ * TypeScript code for the basic Python WebSocket server.
+ */
+var socket = io();
 socket.on('connect', function () {
     alert("B");
 });
