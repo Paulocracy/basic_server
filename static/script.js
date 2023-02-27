@@ -1,7 +1,7 @@
 /**
  * TypeScript code for the basic Python WebSocket server.
  */
-var socket = io();
+const socket = io();
 socket.on('connect', function () {
     alert("B");
 });

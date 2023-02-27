@@ -1,6 +1,6 @@
 # basic_server
 
-*A basic configuration for a Flask Python server with JSON-based Socket.IO communication and TypeScript-derived JavaScript.*
+*A basic configuration for a Flask Python server with JSON-based Socket.IO communication and TypeScript-derived JavaScript for the client.*
 
 ## Installation
 
@@ -17,6 +17,10 @@ git clone https://github.com/Paulocracy/basic_server
 cd basic_server
 conda env create -n basic_server -f environment.yml
 conda activate basic_server
+# 5th (optional): Update the dependencies
+cd static
+npm i --save @types/socket.io
+cd ..
 # 5th: Run basic_server with
 python run.py
 # Optional further test: Check if you can access

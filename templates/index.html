@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-    Main HTML file for the Flask&WebSocket server.
+    Main HTML file for the Flask&Socket.IO server.
 -->
 <html>
 <head>
@@ -13,7 +13,7 @@
     <meta charset="utf-8">
 
     <!--JavaScript loading section-->
-    <script src="{{url_for('static', filename='socket.io.js')}}"></script>
+    <script src="{{url_for('static', filename='./node_modules/socket.io-client/dist/socket.io.min.js')}}"></script>
     <script src="{{url_for('static', filename='script.js')}}"></script>
 </head>
 <body>

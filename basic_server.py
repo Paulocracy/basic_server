@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from flask_socketio import SocketIO, send, emit
+import os
 
 async_mode = None
 app = Flask(__name__)
@@ -52,4 +53,8 @@ if __name__ == "__main__":
     else:
         host = "127.0.0.1"
 
-    socketio.run(app, host=host, port=5000)
+    port = 5000
+    if os.path.isfile("./cert.pem") and os.path.isfile("./cert.pem"):
+        socketio.run(app, host=host, port=port, ssl_context=('cert.pem', 'key.pem'))
+    else:
+        socketio.run(app, host=host, port=port)

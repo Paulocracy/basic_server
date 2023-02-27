@@ -9,7 +9,13 @@ TypeScript static file.
 import os
 
 # Transpile the TypeScript file to JavaScript
-os.system("tsc ./static/script.ts")
+os.system("tsc ./static/script.ts --target es2022")
+
+with open("static/script.js", "r", encoding="utf-8") as f:
+    jslines = f.readlines()
+jslines = [x for x in jslines if not x.startswith("import ")]
+with open("static/script.js", "w", encoding="utf-8") as f:
+    f.writelines(jslines)
 
 # Now, with the corrected JavaScript file,
 # start the server.
