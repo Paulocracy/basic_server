@@ -54,7 +54,7 @@ if __name__ == "__main__":
         host = "127.0.0.1"
 
     port = 5000
-    if os.path.isfile("./cert.pem") and os.path.isfile("./cert.pem"):
+    if os.path.isfile("./cert.pem") and os.path.isfile("./key.pem"):
         socketio.run(app, host=host, port=port, ssl_context=('cert.pem', 'key.pem'))
     else:
         socketio.run(app, host=host, port=port)
